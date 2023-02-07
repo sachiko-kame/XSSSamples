@@ -1,0 +1,9 @@
+version: '3'
+services:
+  apach:
+    container_name: sample_apache
+    build: ./apach/
+    ports:
+      - 86:80
+    volumes:
+      - ../code:/var/www/html
