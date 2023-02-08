@@ -16,7 +16,7 @@ $name = $_GET['name'];
 red
 
 【xx_sample】
-<?php echo htmlspecialchars('</style>><script>alert()</script>') ?><br>
+<?php echo htmlspecialchars('</style><script>alert()</script>') ?><br>
 
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html

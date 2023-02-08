@@ -1,6 +1,5 @@
 <?php
 $name = $_GET['name'];
-
 ?>
 
 <html lang="ja">
