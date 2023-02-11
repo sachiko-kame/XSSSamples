@@ -17,7 +17,7 @@ red
 
 【xx_sample】※codeタグも同じ挙動
 <?php echo htmlspecialchars('" onmouseover="alert()'."\n") ?>
-※上記打った後は一番下の文字にマウスを持ってきてください。
+※上記打った後は下の文字(sample)にマウスを持ってきてください。
 <?php echo htmlspecialchars('"><script>alert()</script>'."\n") ?>
 
 【XSS Locator (Polygot)】
