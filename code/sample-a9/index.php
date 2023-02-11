@@ -15,7 +15,7 @@ $name = $_GET['name'];
 【sample】
 https://sachiko-kame.github.io/
 
-【xx_sample】※codeタグも同じ挙動
+【xx_sample】
 <?php echo htmlspecialchars('javascript:alert()'."\n") ?>
 ※上記打った後は下の文字(sample)をクリックしてください。※全スキームを許可するような関数を通してしまってjavascriptのスキームが通ってしまったら
 
