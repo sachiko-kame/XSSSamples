@@ -1,3 +1,4 @@
+<a href='/'>戻る</a>
 <?php
 $name = $_GET['name'];
 ?>
