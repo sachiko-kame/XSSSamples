@@ -29,7 +29,7 @@ URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Shee
 </form>
 
 <xmp>
-<?php echo $name ?>
+<?php echo $name /*XSS発生箇所*/ ?>
 </xmp>
 
 <?php echo htmlspecialchars($name) ?>
