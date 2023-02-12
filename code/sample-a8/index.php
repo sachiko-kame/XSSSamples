@@ -23,6 +23,7 @@ $name = $_GET['name'];
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 ※XSS Locatorで確認出来るかの確認
+※『"』でPolygotのテキストを入力すれば検知出来ますがそのまま打ち込んだだけでは検知出来ません。
 </pre>
 
 <form action="./" method="get">
