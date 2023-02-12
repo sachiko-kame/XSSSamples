@@ -33,7 +33,7 @@ URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Shee
 <div id="sample"></div>
 
 <script>
-let txt = h(<?php echo $name ?>);
+let txt = h(<?php echo $name ?>); /*XSS発生箇所*/ 
 
 
 //関数参考: https://hacknote.jp/archives/55765/
