@@ -1,0 +1,69 @@
+<a href='/'>戻る</a>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+<pre style="text-align: left; background-color: lightgray;">
+【sample】
+https://sachiko-kame.github.io#abc
+
+【xx_sample】
+https://sachiko-kame.github.io#javascript:alert(1)//|.+\x23
+※上記打った後は下の文字(sample)をクリックしてください。
+
+【XSS Locator (Polygot)】
+URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+※XSS Locatorで確認出来るかの確認
+</pre>
+
+<form action="./" method="get">
+    <input type="text" name="name">
+    <input type="submit" />
+</form>
+
+<div id="sample"></div>
+
+<script>
+
+    //参考 https://gray-code.com/javascript/get-value-entered-in-the-form/
+    let input_submit = document.querySelector("input[type=submit]");
+    input_submit.addEventListener("click", function (e) {
+        // フォームの送信キャンセル
+        e.preventDefault();
+        if (document.querySelector("input[name=name]")) {
+            let input_name = document.querySelector("input[name=name]");
+
+            //https://masatokinugawa.l0.cm/2018/01/regex-domxss.html
+            let index = input_name.value.indexOf('#');
+            if(index > 0){
+                let str = input_name.value.substr(index);
+            
+                var regex  = new RegExp(str, "g" );
+                let newstr = input_name.value.replace(regex, '');
+
+                let sample = document.getElementById("sample");
+                sample.innerHTML = `<a href=${h(newstr)}>sample</a>`;
+            }
+        }
+    });
+
+    //関数参考: https://hacknote.jp/archives/55765/
+    function h(str) {
+        return String(str)
+            .replace(/"/g, "&quot;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+    }
+
+</script>
+
+
+</body>
+
+</html>
