@@ -42,7 +42,7 @@ URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Shee
         // https://masatokinugawa.l0.cm/2018/01/regex-domxss.html
         $pattern ='/{{' . $key. '}}/'; 
         $replace = preg_replace($pattern, htmlspecialchars($value), $template);
-        echo $replace;
+        echo $replace;  /*XSS発生箇所*/ 
     }
 ?>
 

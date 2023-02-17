@@ -51,7 +51,7 @@ URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Shee
 
 <script>
     let sample = document.getElementById("sample");
-    sample.innerHTML = `<a href=<?php echo htmlspecialchars($replace) ?>>sample</a>`;
+    sample.innerHTML = `<a href=<?php echo htmlspecialchars($replace) ?>>sample</a>`;  /*XSS発生箇所*/ 
 </script>
 
 

@@ -48,7 +48,7 @@ URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Shee
                 let newstr = input_name.value.replace(regex, '');
 
                 let sample = document.getElementById("sample");
-                sample.innerHTML = `<a href=${h(newstr)}>sample</a>`;
+                sample.innerHTML = `<a href=${h(newstr)}>sample</a>`;  /*XSS発生箇所*/ 
             }
         }
     });
