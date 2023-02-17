@@ -1,0 +1,59 @@
+<a href='/'>戻る</a>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+<pre style="text-align: left; background-color: lightgray;">
+【sample】
+http://192.168.99.100:86/sample-b8/?name=sachiko
+http://192.168.99.100:86/sample-b8/?name=old_sachiko
+※【http://192.168.99.100:86/】はローカルに合わせてください。urlアクセス。
+
+【xx_sample】
+http://192.168.99.100:86/sample-b8/?name=sachiko&|(.)htt|=$1a$1onerror%3Dalert(1)//
+http://192.168.99.100:86/sample-b8/?|(.)(.)htt|=$1$2a$2onerror$1alert(1)//
+※読み込めない時のイベントハンドラを使っていることに注意。
+
+
+【XSS Locator (Polygot)】
+URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+※XSS Locatorで確認出来るかの確認
+</pre>
+
+<div id="sample"></div>
+
+<script>
+
+    //参考 https://masatokinugawa.l0.cm/2018/01/regex-domxss.html
+    let template = '<img width="100px" style="background-color:green;" src="https://sachiko-kame.github.io/images/{{name}}.png">';
+
+    const searchParams = new URLSearchParams(window.location.search)
+    for (const [key, val] of searchParams) {
+
+        var regex  = new RegExp(`{{${key}}}`, "g" );
+        let newstr = template.replace(regex, h(val));
+
+        let sample = document.getElementById("sample");
+        sample.innerHTML = newstr;  /*XSS発生箇所*/ 
+    }
+
+    //関数参考: https://hacknote.jp/archives/55765/
+    function h(str) {
+        return String(str)
+            .replace(/"/g, "&quot;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+    }
+
+</script>
+
+
+</body>
+
+</html>
