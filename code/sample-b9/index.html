@@ -1,0 +1,75 @@
+<a href='/'>戻る</a>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+
+<pre style="text-align: left; background-color: lightgray;">
+【sample】
+php
+JS
+
+【xx_sample】
+&quot;&gt;&lt;img/onerror=alert() src=a&gt;
+
+ちなみに以下の場合のものが今度の表示の時使われるようだったら発火するハズです。
+&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+【XSS Locator (Polygot)】
+URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+※XSS Locatorで確認出来るかの確認
+</pre>
+
+<form action="./" method="get">
+    <input type="text" name="name">
+    <input type="submit" />
+</form>
+
+<div id="sample"></div>
+
+<script>
+
+    //参考 https://gray-code.com/javascript/get-value-entered-in-the-form/
+    let input_submit = document.querySelector("input[type=submit]");
+    input_submit.addEventListener("click", function (e) {
+        // フォームの送信キャンセル
+        e.preventDefault();
+        if (document.querySelector("input[name=name]")) {
+            let input_name = document.querySelector("input[name=name]");
+
+            //https://zenn.dev/ooooooo_q/articles/zenn_and_markdown_it
+            let sample = document.getElementById("sample");
+            sample.innerHTML = `<div class="Prefix-${input_name.value}">(◍•ᴗ•◍)</div>` /*XSS発生箇所*/ 
+        }
+    });
+
+    //関数参考: https://hacknote.jp/archives/55765/
+    function h(str) {
+        return String(str)
+            .replace(/"/g, "&quot;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+    }
+
+</script>
+
+<style>
+    .Prefix-PHP{
+        background-color: aqua;
+    }
+
+    .Prefix-JS{
+        background-color: blueviolet;
+    }
+
+</style>
+
+
+</body>
+
+</html>
