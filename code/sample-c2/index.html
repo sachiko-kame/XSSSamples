@@ -1,0 +1,64 @@
+<a href='/'>戻る</a>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+<pre style="text-align: left; background-color: lightgray;">
+【sample】
+https://sachiko-kame.github.io/
+
+【xx_sample】
+data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=
+
+【XSS Locator (Polygot)】
+URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+※XSS Locatorで確認出来るかの確認
+</pre>
+
+    <form action="./" method="get">
+        <input type="text" name="name">
+        <input type="submit" />
+    </form>
+
+    <div id="sample"></div>
+
+    <script type="text/babel">
+        //参考 https://gray-code.com/javascript/get-value-entered-in-the-form/
+        let input_submit = document.querySelector("input[type=submit]");
+        input_submit.addEventListener("click", function (e) {
+            // フォームの送信キャンセル
+            e.preventDefault();
+            if (document.querySelector("input[name=name]")) {
+                let input_name = document.querySelector("input[name=name]");
+                let sample = document.getElementById("sample");
+                //https://note.crohaco.net/2018/markdown-xss/
+                //https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html#xss-via-request-redirection
+                sample.innerHTML = `<iframe src=${h(input_name.value)}></iframe>`;  /*XSS発生箇所*/
+            }
+        });
+
+        //関数参考: https://hacknote.jp/archives/55765/
+        function h(str) {
+            return String(str)
+                .replace(/"/g, "&quot;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+        }
+
+
+    </script>
+
+</body>
+
+</html>
