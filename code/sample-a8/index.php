@@ -20,7 +20,7 @@ $name = $_GET['name'];
 <?php echo htmlspecialchars('"" onmouseover="alert()"'."\n") ?>
 ※上記打った後は下の文字(sample)にマウスを持ってきてください。間違ったエスケープ。
 
-【owaspの攻撃】
+【owaspの攻撃】※不発
 <?php echo htmlspecialchars('onMouseOver=alert(1);') ?><br>
 
 【XSS Locator (Polygot)】

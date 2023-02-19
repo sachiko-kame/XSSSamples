@@ -19,7 +19,7 @@ red
 【xx_sample】
 <?php echo htmlspecialchars('</style><script>alert()</script>') ?><br>
 
-【owaspの攻撃】
+【owaspの攻撃】※不発
 <?php echo htmlspecialchars('<scrIpt>alert(1);</scRipt>') ?><br>
 【owaspの攻撃】
 #jaVasCript:/*-/*`/*\`/*&#039;/*&quot;/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert(5397)//&gt;\x3e
