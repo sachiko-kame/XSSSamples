@@ -20,11 +20,19 @@ $name = $_GET['name'];
 【xx_sample】
 <?php echo htmlspecialchars('こんにちは今日は良い天気ですね#<svg onload="alert(1)"></svg>'."\n") ?>
 
+【owaspの攻撃】
+?name=abc#&lt;img src=&quot;random.gif&quot; onerror=alert(5397)&gt;
+【owaspの攻撃】
+#jaVasCript:/*-/*`/*\`/*&#039;/*&quot;/**/(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert(5397)//&gt;\x3e
+
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 ※XSS Locatorで確認出来るかの確認
 ※『#』の後ろにつければ検知出来ますがそのまま打ち込んだだけでは検知出来ません。
 </pre>
+owaspの検知結果<br>
+<img width=500px src="../owasp_result/sample-b4_1.png"><br>
+<img width=500px src="../owasp_result/sample-b4_2.png"><br>
 
 <form action="./" method="get">
     <input type="text" name="name">

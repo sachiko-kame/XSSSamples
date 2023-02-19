@@ -21,6 +21,9 @@ https://sachiko-kame.github.io#abc
 <?php echo htmlspecialchars('https://sachiko-kame.github.io#javascript:alert(1)\/\/|.+\x23'."\n") ?>
 ※上記打った後は下の文字(sample)をクリックしてください。
 
+【owaspの攻撃】
+検知不可
+
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 ※XSS Locatorで確認出来るかの確認

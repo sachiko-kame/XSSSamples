@@ -20,10 +20,15 @@ sample
 <?php echo htmlspecialchars('</script><script>alert()</script>'."\n") ?>
 ※関数に入れるだけなら、、、の油断したパターンですかね、、
 
+【owaspの攻撃】
+<?php echo htmlspecialchars('</script><scrIpt>alert(1);</scRipt><script>') ?><br>
+
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 ※XSS Locatorで確認出来るかの確認
 </pre>
+owaspの検知結果<br>
+<img width=500px src="../owasp_result/sample-b2_1.png"><br>
 
 <form action="./" method="get">
     name: <input type="text" name="name">

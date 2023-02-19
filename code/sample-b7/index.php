@@ -31,6 +31,9 @@ http://192.168.99.100:86/sample-b7/?name=old_sachiko
 <?php echo htmlspecialchars('http://192.168.99.100:86/sample-b7/?|(.)(.)htt|=$1$2a$2onerror$1alert(1)//'."\n") ?>
 ※読み込めない時のイベントハンドラを使っていることに注意。
 
+【owaspの攻撃】
+検知不可
+
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 ※XSS Locatorで確認出来るかの確認

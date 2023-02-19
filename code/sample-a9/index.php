@@ -20,6 +20,9 @@ https://sachiko-kame.github.io/
 <?php echo htmlspecialchars('javascript:alert()'."\n") ?>
 ※上記打った後は下の文字(sample)をクリックしてください。※全スキームを許可するような関数を通してしまってjavascriptのスキームが通ってしまったら
 
+【owaspの攻撃】
+検知不可
+
 【XSS Locator (Polygot)】
 URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 ※XSS Locatorで確認出来るかの確認
