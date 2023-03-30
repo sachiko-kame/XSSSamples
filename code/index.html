@@ -11,30 +11,30 @@
 <ul>
 
 <b>sample-a</b>
-<li><a href='/sample-a1'>sample-a1</a></li>
-<li><a href='/sample-a2'>sample-a2</a></li>
-<li><a href='/sample-a3'>sample-a3</a></li>
-<li><a href='/sample-a4'>sample-a4  (◍•ᴗ•◍) </a></li> 
-<li><a href='/sample-a5'>sample-a5</a></li>
-<li><a href='/sample-a6'>sample-a6  (◍•ᴗ•◍) </a></li>
-<li><a href='/sample-a7'>sample-a7</a></li>
-<li><a href='/sample-a8'>sample-a8 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン ※OWASPZAP拾えず(攻撃不足)</a></li>
-<li><a href='/sample-a9'>sample-a9 ※OWASPZAP拾えず</a></li>
+<li><a href='/sample-a1'>sample-a1</a><small style="color:darkgray;font-size: 10px;"> ※&lt;title&gt;中のエスケープもれ</small></li>
+<li><a href='/sample-a2'>sample-a2</a><small style="color:darkgray;font-size: 10px;"> ※&lt;style&gt;中のエスケープもれ</small></li>
+<li><a href='/sample-a3'>sample-a3</a><small style="color:darkgray;font-size: 10px;"> ※&lt;textarea&gt;中のエスケープもれ</small></li>
+<li><a href='/sample-a4'>sample-a4  (◍•ᴗ•◍) </a><small style="color:darkgray;font-size: 10px;"> ※&lt;script&gt;中のエスケープもれ</small></li> 
+<li><a href='/sample-a5'>sample-a5</a><small style="color:darkgray;font-size: 10px;"> ※&lt;xmp&gt;中のエスケープもれ</small></li>
+<li><a href='/sample-a6'>sample-a6  (◍•ᴗ•◍) </a><small style="color:darkgray;font-size: 10px;"> ※&lt;pre&gt;中のエスケープもれ</small></li>
+<li><a href='/sample-a7'>sample-a7</a><small style="color:darkgray;font-size: 10px;"> ※エスケープ不十分(『&quot;』と『&#039;』のエスケープされないもの)</small></li>
+<li><a href='/sample-a8'>sample-a8 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン ※OWASPZAP拾えず(攻撃不足)</a><small style="color:darkgray;font-size: 10px;"> ※エスケープ不十分(『&quot;』と『&#039;』のエスケープされないもの)</small></li>
+<li><a href='/sample-a9'>sample-a9 ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※urlスキームチェック漏れ</small></li>
 
 <b>sample-b</b>
-<li><a href='/sample-b1'>sample-b1</a></li>
-<li><a href='/sample-b2'>sample-b2</a></li>
-<li><a href='/sample-b3'>sample-b3 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン</a></li>
-<li><a href='/sample-b4'>sample-b4 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン</a></li>
-<li><a href='/sample-b5'>sample-b5 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a></li>
-<li><a href='/sample-b6'>sample-b6 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a></li>
-<li><a href='/sample-b7'>sample-b7 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a></li>
-<li><a href='/sample-b8'>sample-b8 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a></li>
-<li><a href='/sample-b9'>sample-b9 ※確認方法が問題なければ『Polygot』でも検知出来ると言える ※OWASPZAP拾えず(攻撃不足)</a></li>
+<li><a href='/sample-b1'>sample-b1</a><small style="color:darkgray;font-size: 10px;"> ※php文字列出力をHTMLのコメントで囲った箇所のエスケープもれ</small></li>
+<li><a href='/sample-b2'>sample-b2</a><small style="color:darkgray;font-size: 10px;"> ※不適切なエスケープ箇所(phpの出力をjsのエスケープ関数で囲っている)</small></li>
+<li><a href='/sample-b3'>sample-b3 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン</a><small style="color:darkgray;font-size: 10px;"> ※for文内のエスケープ漏れ</small></li>
+<li><a href='/sample-b4'>sample-b4 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン</a><small style="color:darkgray;font-size: 10px;"> ※for文内のエスケープ漏れ(scriptの文字だけ弾く処理入れたもの)</small></li>
+<li><a href='/sample-b5'>sample-b5 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※正規表現にユーザーの入力を入れられチェック不十分(phpコード内)(基本正規表現をユーザー入力で作成しない)</small></li>
+<li><a href='/sample-b6'>sample-b6 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※正規表現にユーザーの入力を入れられチェック不十分(jsコード内)(基本正規表現をユーザー入力で作成しない)</small></li>
+<li><a href='/sample-b7'>sample-b7 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※正規表現にユーザーの入力を一部入れられチェック不十分(phpコード内)(基本正規表現をユーザー入力で作成しない)</small></li>
+<li><a href='/sample-b8'>sample-b8 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※正規表現にユーザーの入力を一部入れられチェック不十分(jsコード内)(基本正規表現をユーザー入力で作成しない)</small></li>
+<li><a href='/sample-b9'>sample-b9 ※確認方法が問題なければ『Polygot』でも検知出来ると言える ※OWASPZAP拾えず(攻撃不足)</a><small style="color:darkgray;font-size: 10px;"> ※styleのクラス記述箇所にプレフィックス入れた後エスケープ漏れ</small></li>
 
 <b>sample-c</b>
-<li><a href='/sample-c1'>sample-c1 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a></li>
-<li><a href='/sample-c2'>sample-c2</a></li>
+<li><a href='/sample-c1'>sample-c1 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※trycatchのエラー出力文言のエスケープ漏れ</small></li>
+<li><a href='/sample-c2'>sample-c2</a><small style="color:darkgray;font-size: 10px;"> ※iframeのurlスキームチェック漏れ</small></li>
 
 </ul>
 
