@@ -23,7 +23,7 @@
 
 <b>sample-b</b>
 <li><a href='/sample-b1'>sample-b1</a><small style="color:darkgray;font-size: 10px;"> ※php文字列出力をHTMLのコメントで囲った箇所のエスケープもれ</small></li>
-<li><a href='/sample-b2'>sample-b2</a><small style="color:darkgray;font-size: 10px;"> ※不適切なエスケープ箇所(phpの出力をjsのエスケープ関数で囲っている)</small></li>
+<li><a href='/sample-b2'>sample-b2</a><small style="color:darkgray;font-size: 10px;"> ※不適切なエスケープ箇所(phpの出力をjsのエスケープ関数で囲っている)(php出力とかでなくても文字列指定でも同じ感じになります。こういう時はjsonで取得のようにしてください。)</small></li>
 <li><a href='/sample-b3'>sample-b3 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン</a><small style="color:darkgray;font-size: 10px;"> ※for文内のエスケープ漏れ</small></li>
 <li><a href='/sample-b4'>sample-b4 ※適切な箇所に入れないと『Polygot』で検知出来ないパターン</a><small style="color:darkgray;font-size: 10px;"> ※for文内のエスケープ漏れ(scriptの文字だけ弾く処理入れたもの)</small></li>
 <li><a href='/sample-b5'>sample-b5 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※正規表現にユーザーの入力を入れられチェック不十分(phpコード内)(基本正規表現をユーザー入力で作成しない)</small></li>
@@ -35,6 +35,7 @@
 <b>sample-c</b>
 <li><a href='/sample-c1'>sample-c1 ※『Polygot』で検知出来ないパターン ※OWASPZAP拾えず</a><small style="color:darkgray;font-size: 10px;"> ※trycatchのエラー出力文言のエスケープ漏れ</small></li>
 <li><a href='/sample-c2'>sample-c2</a><small style="color:darkgray;font-size: 10px;"> ※iframeのurlスキームチェック漏れ</small></li>
+<li><a href='/sample-c3'>sample-c3</a><small style="color:darkgray;font-size: 10px;"> ※</small></li>
 
 </ul>
 

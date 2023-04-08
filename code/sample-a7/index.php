@@ -28,7 +28,7 @@ URL:https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Shee
 ※XSS Locatorで確認出来るかの確認
 </pre>
 owaspの検知結果<br>
-<img width=500px src="../owasp_result/sample-a7_1.png"><br>
+<img width=250px src="../owasp_result/sample-a7_1.png"><br>
 
 <form action="./" method="get">
     name: <input type="text" name="name">
