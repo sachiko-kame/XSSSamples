@@ -25,5 +25,6 @@ sample-aaa1 ~ sample-aa9
 $ cd <<ymlある箇所>>
 $ docker-compose up --build -d
 
-http://192.168.99.100:86/
+※『localhost』がdockerのipの場合もあるかもです。昔の自分と同じならipは`$ docker-machine ip default`で検索出来るはず、
+http://localhost:86/
 ```
